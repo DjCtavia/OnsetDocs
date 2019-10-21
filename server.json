@@ -4,259 +4,329 @@
             "params": [
                 {
                     "name": "r",
-                    "type": "number"
+                    "type": "integer",
+                    "description": "The red value from 0 to 255"
                 },
                 {
                     "name": "g",
-                    "type": "number"
+                    "type": "integer",
+                    "description": "The green value from 0 to 255"
                 },
                 {
                     "name": "b",
-                    "type": "number"
+                    "type": "integer",
+                    "description": "The blue value from 0 to 255"
                 },
                 {
                     "name": "a",
-                    "type": "number"
+                    "type": "integer",
+                    "description": "The alpha value from 0 to 255"
                 }
             ],
             "return": {
-                "type": ["number"]
-            }
+                "type": ["integer"],
+                "description": "The hex color represented by the color values"
+            },
+            "description": ""
         },
         "RGB": {
             "params": [
                 {
                     "name": "r",
-                    "type": "number"
+                    "type": "integer",
+                    "description": "The red value from 0 to 255"
                 },
                 {
                     "name": "g",
-                    "type": "number"
+                    "type": "integer",
+                    "description": "The green value from 0 to 255"
                 },
                 {
                     "name": "b",
-                    "type": "number"
+                    "type": "integer",
+                    "description": "The blue value from 0 to 255"
                 }
             ],
             "return": {
-                "type": ["number"]
-            }
+                "type": ["integer"],
+                "description": "The hex color represented by the color values"
+            },
+            "description": ""
         },
         "HexToRGBA": {
             "params": [
                 {
                     "name": "hex",
-                    "type": "number"
+                    "type": "integer",
+                    "description": "The hex color"
                 }
             ],
             "return": {
-                "type": [["number", "number", "number", "number"]]
-            }
+                "type": [["integer", "integer", "integer", "integer"]],
+                "description": "The color values r, g, b, a"
+            },
+            "description": ""
         },
         "Random": {
             "params": [
                 {
                     "name": "min",
-                    "type": "number",
-                    "optional": true
+                    "type": "integer",
+                    "optional": true,
+                    "description": "The minimal value"
                 },
                 {
                     "name": "max",
-                    "type": "number",
-                    "optional": true
+                    "type": "integer",
+                    "optional": true,
+                    "description": "The maximum (maximal value + 1)"
                 }
             ],
             "return": {
-                "type": ["number"]
-            }
+                "type": ["integer"],
+                "description": "A random number from min to max-1"
+            },
+            "description": ""
         },
         "RandomFloat": {
             "params": [
                 {
                     "name": "min",
-                    "type": "number",
-                    "optional": true
+                    "type": "float",
+                    "optional": true,
+                    "description": "The minimal value"
                 },
                 {
                     "name": "max",
-                    "type": "number",
-                    "optional": true
+                    "type": "float",
+                    "optional": true,
+                    "description": "The maximum"
                 }
             ],
             "return": {
-                "type": ["number"]
-            }
+                "type": ["float"],
+                "description": "A random number from min and less than max"
+            },
+            "description": ""
         },
         "Base64Encode": {
             "params": [
                 {
-                    "name": "text",
-                    "type": "string"
+                    "name": "input",
+                    "type": "string",
+                    "description": "A string"
                 }
             ],
             "return": {
-                "type": ["string"]
-            }
+                "type": ["string"],
+                "description": "base64 representation of input"
+            },
+            "description": ""
         },
         "Base64Decode": {
             "params": [
                 {
                     "name": "text",
-                    "type": "string"
+                    "type": "string",
+                    "description": "A base64 encoded string"
                 }
             ],
             "return": {
-                "type": ["string"]
-            }
+                "type": ["string"],
+                "description": "decoded ascii string"
+            },
+            "description": ""
         },
         "GetTimeSeconds": {
             "return": {
-                "type": ["number"]
-            }
+                "type": ["integer"],
+                "description": "time in seconds"
+            },
+            "description": ""
         },
         "GetDeltaSeconds": {
             "return": {
-                "type": ["number"]
-            }
+                "type": ["float"],
+                "description": "delta in seconds"
+            },
+            "description": ""
         },
         "GetTickCount": {
             "return": {
-                "type": ["number"]
-            }
+                "type": ["integer"],
+                "description": "The tick count"
+            },
+            "description": ""
         },
         "GetGameVersion": {
             "return": {
-                "type": ["number"]
-            }
+                "type": ["float"],
+                "description": "The game version"
+            },
+            "description": ""
         },
         "GetGameVersionString": {
             "return": {
-                "type": ["string"]
-            }
+                "type": ["string"],
+                "description": "The game version as string"
+            },
+            "description": ""
         },
         "GetServerTickRate": {
             "return": {
-                "type": ["number"]
-            }
+                "type": ["integer"],
+                "description": "server tickrate in t/s"
+            },
+            "description": ""
         },
         "ServerExit": {
             "params": [
                 {
                     "name": "message",
                     "type": "string",
-                    "optional": true
+                    "optional": true,
+                    "description": "A shutdown message"
                 }
-            ]
+            ],
+            "description": ""
         },
         "SetServerName": {
             "params": [
                 {
                     "name": "name",
-                    "type": "string"
+                    "type": "string",
+                    "description": "New server name"
                 }
-            ]
+            ],
+            "description": ""
         },
         "GetServerName": {
             "return": {
-                "type": ["string"]
-            }
+                "type": ["string"],
+                "description": "Current server name"
+            },
+            "description": ""
         },
         "GetMaxPlayers": {
             "return": {
-                "type": ["number"]
-            }
+                "type": ["integer"],
+                "description": "Maximal amount of players"
+            },
+            "description": ""
         },
         "GetDistance2D": {
             "params": [
                 {
                     "name": "x1",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "y1",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "x2",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "y2",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 }
             ],
             "return": {
-                "type": ["number"]
-            }
+                "type": ["float"],
+                "description": "the distance"
+            },
+            "description": ""
         },
         "GetDistance3D": {
             "params": [
                 {
                     "name": "x1",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "y1",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "z1",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "x2",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "y2",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "z2",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 }
             ],
             "return": {
-                "type": ["number"]
-            }
+                "type": ["float"],
+                "description": "the distance"
+            },
+            "description": ""
         },
         "CreateExplosion": {
             "params": [
                 {
                     "name": "explosion_type",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "x",
-                    "type":"number"
+                    "type":"integer",
+                    "description": ""
                 },
                 {
                     "name": "y",
-                    "type":"number"
+                    "type":"integer",
+                    "description": ""
                 },
                 {
                     "name": "z",
-                    "type":"number"
+                    "type":"integer",
+                    "description": ""
                 },
                 {
                     "name": "dimension",
-                    "type":"number",
-                    "optional": true
+                    "type":"integer",
+                    "optional": true,
+                    "description": ""
                 },
                 {
                     "name": "sound",
                     "type":"boolean",
-                    "optional": true
+                    "optional": true,
+                    "description": ""
                 },
                 {
                     "name": "camShakeRadius",
-                    "type":"number",
-                    "optional": true
+                    "type":"float",
+                    "optional": true,
+                    "description": ""
                 },
                 {
                     "name": "radialForce",
-                    "type":"number",
-                    "optional": true
+                    "type":"float",
+                    "optional": true,
+                    "description": ""
                 }
             ]
         },
@@ -264,39 +334,47 @@
             "params": [
                 {
                     "name": "model",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "x",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "y",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
-                    "name":"z",
-                    "type":"number"
+                    "name": "z",
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "rotation",
-                    "type": "number"
+                    "type": "float",
+                    "description": ""
                 },
                 {
                     "name": "enableInteract",
                     "type": "boolean",
-                    "optional": true
+                    "optional": true,
+                    "description": ""
                 }
             ],
             "return": {
-                "type": ["number"]
+                "type": ["integer"],
+                "description": ""
             }
         },
         "DestroyDoor": {
             "params": [
                 {
                     "name": "door",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 }
             ]
         },
@@ -304,11 +382,13 @@
             "params": [
                 {
                     "name": "door",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "open",
-                    "type": "boolean"
+                    "type": "boolean",
+                    "description": ""
                 }
             ]
         },
@@ -316,62 +396,103 @@
             "params": [
                 {
                     "name": "door",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 }
             ],
             "return": {
-                "type": ["boolean"]
+                "type": ["boolean"],
+                "description": ""
             }
         },
         "GetAllDoors": {
             "return": {
-                "type": ["array<number>"]
+                "type": ["array<integer>"],
+                "description": ""
             }
         },
         "GetDoorCount": {
             "return": {
-                "type": ["number"]
+                "type": ["integer"],
+                "description": ""
             }
         },
         "GetDoorModel": {
             "params": [
                 {
                     "name": "door",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 }
             ],
             "return": {
-                "type": ["number"]
+                "type": ["integer"],
+                "description": ""
             }
         },
         "SetDoorLocation": {
             "params": [
                 {
                     "name": "door",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "x",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "y",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 },
                 {
                     "name": "z",
-                    "type": "number"
+                    "type": "integer",
+                    "description": ""
                 }
             ]
         },
         "GetDoorLocation": {
-
+            "params": [
+                {
+                    "name": "door",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "type": [["integer", "integer", "integer"]],
+                "description": ""
+            }
         },
         "SetDoorDimension": {
-
+            "params": [
+                {
+                    "name": "door",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "dimension",
+                    "type": "integer",
+                    "description": ""
+                }
+            ]
         },
         "GetDoorDimension": {
-
+            "params": [
+                {
+                    "name": "door",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "type": ["integer"],
+                "description": ""
+            }
         }
     }
 }
