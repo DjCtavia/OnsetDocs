@@ -1,0 +1,348 @@
+{
+    "functions": {
+        "RGBA": {
+            "params": [
+                {
+                    "name": "r",
+                    "type": "number"
+                },
+                {
+                    "name": "g",
+                    "type": "number"
+                },
+                {
+                    "name": "b",
+                    "type": "number"
+                },
+                {
+                    "name": "a",
+                    "type": "number"
+                }
+            ],
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "RGB": {
+            "params": [
+                {
+                    "name": "r",
+                    "type": "number"
+                },
+                {
+                    "name": "g",
+                    "type": "number"
+                },
+                {
+                    "name": "b",
+                    "type": "number"
+                }
+            ],
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "HexToRGBA": {
+            "params": [
+                {
+                    "name": "hex",
+                    "type": "number"
+                }
+            ],
+            "return": {
+                "type": [["number", "number", "number", "number"]]
+            }
+        },
+        "Random": {
+            "params": [
+                {
+                    "name": "min",
+                    "type": "number",
+                    "optional": true
+                },
+                {
+                    "name": "max",
+                    "type": "number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "RandomFloat": {
+            "params": [
+                {
+                    "name": "min",
+                    "type": "number",
+                    "optional": true
+                },
+                {
+                    "name": "max",
+                    "type": "number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "Base64Encode": {
+            "params": [
+                {
+                    "name": "text",
+                    "type": "string"
+                }
+            ],
+            "return": {
+                "type": ["string"]
+            }
+        },
+        "Base64Decode": {
+            "params": [
+                {
+                    "name": "text",
+                    "type": "string"
+                }
+            ],
+            "return": {
+                "type": ["string"]
+            }
+        },
+        "GetTimeSeconds": {
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "GetDeltaSeconds": {
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "GetTickCount": {
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "GetGameVersion": {
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "GetGameVersionString": {
+            "return": {
+                "type": ["string"]
+            }
+        },
+        "GetServerTickRate": {
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "ServerExit": {
+            "params": [
+                {
+                    "name": "message",
+                    "type": "string",
+                    "optional": true
+                }
+            ]
+        },
+        "SetServerName": {
+            "params": [
+                {
+                    "name": "name",
+                    "type": "string"
+                }
+            ]
+        },
+        "GetServerName": {
+            "return": {
+                "type": ["string"]
+            }
+        },
+        "GetMaxPlayers": {
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "GetDistance2D": {
+            "params": [
+                {
+                    "name": "x1",
+                    "type": "number"
+                },
+                {
+                    "name": "y1",
+                    "type": "number"
+                },
+                {
+                    "name": "x2",
+                    "type": "number"
+                },
+                {
+                    "name": "y2",
+                    "type": "number"
+                }
+            ],
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "GetDistance3D": {
+            "params": [
+                {
+                    "name": "x1",
+                    "type": "number"
+                },
+                {
+                    "name": "y1",
+                    "type": "number"
+                },
+                {
+                    "name": "z1",
+                    "type": "number"
+                },
+                {
+                    "name": "x2",
+                    "type": "number"
+                },
+                {
+                    "name": "y2",
+                    "type": "number"
+                },
+                {
+                    "name": "z2",
+                    "type": "number"
+                }
+            ],
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "CreateExplosion": {
+            "params": [
+                {
+                    "name": "explosion_type",
+                    "type": "number"
+                },
+                {
+                    "name": "x",
+                    "type":"number"
+                },
+                {
+                    "name": "y",
+                    "type":"number"
+                },
+                {
+                    "name": "z",
+                    "type":"number"
+                },
+                {
+                    "name": "dimension",
+                    "type":"number",
+                    "optional": true
+                },
+                {
+                    "name": "sound",
+                    "type":"boolean",
+                    "optional": true
+                },
+                {
+                    "name": "camShakeRadius",
+                    "type":"number",
+                    "optional": true
+                },
+                {
+                    "name": "radialForce",
+                    "type":"number",
+                    "optional": true
+                }
+            ]
+        },
+        "CreateDoor": {
+            "params": [
+                {
+                    "name": "model",
+                    "type": "number"
+                },
+                {
+                    "name": "x",
+                    "type": "number"
+                },
+                {
+                    "name": "y",
+                    "type": "number"
+                },
+                {
+                    "name":"z",
+                    "type":"number"
+                },
+                {
+                    "name": "rotation",
+                    "type": "number"
+                },
+                {
+                    "name": "enableInteract",
+                    "type": "boolean",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "type": ["number"]
+            }
+        },
+        "DestroyDoor": {
+            "params": [
+                {
+                    "name": "door",
+                    "type": "number"
+                }
+            ]
+        },
+        "SetDoorOpen": {
+            "params": [
+                {
+                    "name": "door",
+                    "type": "number"
+                },
+                {
+                    "name": "open",
+                    "type": "boolean"
+                }
+            ]
+        },
+        "IsDoorOpen": {
+            "params": [
+                {
+                    "name": "door",
+                    "type": "number"
+                }
+            ],
+            "return": {
+                "type": ["boolean"]
+            }
+        },
+        "GetAllDoors": {
+
+        },
+        "GetDoorCount": {
+
+        },
+        "GetDoorModel": {
+
+        },
+        "SetDoorLocation": {
+
+        },
+        "GetDoorLocation": {
+
+        },
+        "SetDoorDimension": {
+
+        },
+        "GetDoorDimension": {
+
+        }
+    }
+}
