@@ -324,16 +324,45 @@
             }
         },
         "GetAllDoors": {
-
+            "return": {
+                "type": ["array<number>"]
+            }
         },
         "GetDoorCount": {
-
+            "return": {
+                "type": ["number"]
+            }
         },
         "GetDoorModel": {
-
+            "params": [
+                {
+                    "name": "door",
+                    "type": "number"
+                }
+            ],
+            "return": {
+                "type": ["number"]
+            }
         },
         "SetDoorLocation": {
-
+            "params": [
+                {
+                    "name": "door",
+                    "type": "number"
+                },
+                {
+                    "name": "x",
+                    "type": "number"
+                },
+                {
+                    "name": "y",
+                    "type": "number"
+                },
+                {
+                    "name": "z",
+                    "type": "number"
+                }
+            ]
         },
         "GetDoorLocation": {
 
