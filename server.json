@@ -1,4 +1,71 @@
 {
+    "structures": {
+        "NetworkStats": {
+            "fields": [
+                {
+                    "name": "packetlossTotal",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "packetlossLastSecond",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "messagesInResendBuffer",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "bytesInResendBuffer",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "bytesSend",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "bytesReceived",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "bytesResent",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "bytesSendTotal",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "bytesReceivedTotal",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "bytesResentTotal",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "isLimitedByCongestionControl",
+                    "type": "boolean",
+                    "description": ""
+                },
+                {
+                    "name": "isLimitedByOutgoingBandwidthLimit",
+                    "type": "boolean",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        }
+    },
     "functions": {
         "RGBA": {
             "params": [
@@ -23,8 +90,10 @@
                     "description": "The alpha value from 0 to 255"
                 }
             ],
-            "return": {
-                "type": ["integer"],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
                 "description": "The hex color represented by the color values"
             },
             "description": ""
@@ -47,8 +116,10 @@
                     "description": "The blue value from 0 to 255"
                 }
             ],
-            "return": {
-                "type": ["integer"],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
                 "description": "The hex color represented by the color values"
             },
             "description": ""
@@ -61,8 +132,15 @@
                     "description": "The hex color"
                 }
             ],
-            "return": {
-                "type": [["integer", "integer", "integer", "integer"]],
+            "returns": {
+                "type": [
+                    [
+                        "integer",
+                        "integer",
+                        "integer",
+                        "integer"
+                    ]
+                ],
                 "description": "The color values r, g, b, a"
             },
             "description": ""
@@ -82,8 +160,10 @@
                     "description": "The maximum (maximal value + 1)"
                 }
             ],
-            "return": {
-                "type": ["integer"],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
                 "description": "A random number from min to max-1"
             },
             "description": ""
@@ -103,8 +183,10 @@
                     "description": "The maximum"
                 }
             ],
-            "return": {
-                "type": ["float"],
+            "returns": {
+                "type": [
+                    "float"
+                ],
                 "description": "A random number from min and less than max"
             },
             "description": ""
@@ -117,8 +199,10 @@
                     "description": "A string"
                 }
             ],
-            "return": {
-                "type": ["string"],
+            "returns": {
+                "type": [
+                    "string"
+                ],
                 "description": "base64 representation of input"
             },
             "description": ""
@@ -131,50 +215,64 @@
                     "description": "A base64 encoded string"
                 }
             ],
-            "return": {
-                "type": ["string"],
+            "returns": {
+                "type": [
+                    "string"
+                ],
                 "description": "decoded ascii string"
             },
             "description": ""
         },
         "GetTimeSeconds": {
-            "return": {
-                "type": ["integer"],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
                 "description": "time in seconds"
             },
             "description": ""
         },
         "GetDeltaSeconds": {
-            "return": {
-                "type": ["float"],
+            "returns": {
+                "type": [
+                    "float"
+                ],
                 "description": "delta in seconds"
             },
             "description": ""
         },
         "GetTickCount": {
-            "return": {
-                "type": ["integer"],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
                 "description": "The tick count"
             },
             "description": ""
         },
         "GetGameVersion": {
-            "return": {
-                "type": ["float"],
+            "returns": {
+                "type": [
+                    "float"
+                ],
                 "description": "The game version"
             },
             "description": ""
         },
         "GetGameVersionString": {
-            "return": {
-                "type": ["string"],
+            "returns": {
+                "type": [
+                    "string"
+                ],
                 "description": "The game version as string"
             },
             "description": ""
         },
         "GetServerTickRate": {
-            "return": {
-                "type": ["integer"],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
                 "description": "server tickrate in t/s"
             },
             "description": ""
@@ -201,15 +299,19 @@
             "description": ""
         },
         "GetServerName": {
-            "return": {
-                "type": ["string"],
+            "returns": {
+                "type": [
+                    "string"
+                ],
                 "description": "Current server name"
             },
             "description": ""
         },
         "GetMaxPlayers": {
-            "return": {
-                "type": ["integer"],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
                 "description": "Maximal amount of players"
             },
             "description": ""
@@ -237,8 +339,10 @@
                     "description": ""
                 }
             ],
-            "return": {
-                "type": ["float"],
+            "returns": {
+                "type": [
+                    "float"
+                ],
                 "description": "the distance"
             },
             "description": ""
@@ -276,8 +380,10 @@
                     "description": ""
                 }
             ],
-            "return": {
-                "type": ["float"],
+            "returns": {
+                "type": [
+                    "float"
+                ],
                 "description": "the distance"
             },
             "description": ""
@@ -291,44 +397,45 @@
                 },
                 {
                     "name": "x",
-                    "type":"integer",
+                    "type": "integer",
                     "description": ""
                 },
                 {
                     "name": "y",
-                    "type":"integer",
+                    "type": "integer",
                     "description": ""
                 },
                 {
                     "name": "z",
-                    "type":"integer",
+                    "type": "integer",
                     "description": ""
                 },
                 {
                     "name": "dimension",
-                    "type":"integer",
+                    "type": "integer",
                     "optional": true,
                     "description": ""
                 },
                 {
                     "name": "sound",
-                    "type":"boolean",
+                    "type": "boolean",
                     "optional": true,
                     "description": ""
                 },
                 {
                     "name": "camShakeRadius",
-                    "type":"float",
+                    "type": "float",
                     "optional": true,
                     "description": ""
                 },
                 {
                     "name": "radialForce",
-                    "type":"float",
+                    "type": "float",
                     "optional": true,
                     "description": ""
                 }
-            ]
+            ],
+            "description": ""
         },
         "CreateDoor": {
             "params": [
@@ -364,10 +471,13 @@
                     "description": ""
                 }
             ],
-            "return": {
-                "type": ["integer"],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
                 "description": ""
-            }
+            },
+            "description": ""
         },
         "DestroyDoor": {
             "params": [
@@ -376,7 +486,8 @@
                     "type": "integer",
                     "description": ""
                 }
-            ]
+            ],
+            "description": ""
         },
         "SetDoorOpen": {
             "params": [
@@ -390,7 +501,8 @@
                     "type": "boolean",
                     "description": ""
                 }
-            ]
+            ],
+            "description": ""
         },
         "IsDoorOpen": {
             "params": [
@@ -400,22 +512,31 @@
                     "description": ""
                 }
             ],
-            "return": {
-                "type": ["boolean"],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
                 "description": ""
-            }
+            },
+            "description": ""
         },
         "GetAllDoors": {
-            "return": {
-                "type": ["array<integer>"],
+            "returns": {
+                "type": [
+                    "array<integer>"
+                ],
                 "description": ""
-            }
+            },
+            "description": ""
         },
         "GetDoorCount": {
-            "return": {
-                "type": ["integer"],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
                 "description": ""
-            }
+            },
+            "description": ""
         },
         "GetDoorModel": {
             "params": [
@@ -425,10 +546,13 @@
                     "description": ""
                 }
             ],
-            "return": {
-                "type": ["integer"],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
                 "description": ""
-            }
+            },
+            "description": ""
         },
         "SetDoorLocation": {
             "params": [
@@ -452,7 +576,8 @@
                     "type": "integer",
                     "description": ""
                 }
-            ]
+            ],
+            "description": ""
         },
         "GetDoorLocation": {
             "params": [
@@ -462,10 +587,17 @@
                     "description": ""
                 }
             ],
-            "return": {
-                "type": [["integer", "integer", "integer"]],
+            "returns": {
+                "type": [
+                    [
+                        "integer",
+                        "integer",
+                        "integer"
+                    ]
+                ],
                 "description": ""
-            }
+            },
+            "description": ""
         },
         "SetDoorDimension": {
             "params": [
@@ -479,7 +611,8 @@
                     "type": "integer",
                     "description": ""
                 }
-            ]
+            ],
+            "description": ""
         },
         "GetDoorDimension": {
             "params": [
@@ -489,10 +622,799 @@
                     "description": ""
                 }
             ],
-            "return": {
-                "type": ["integer"],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
                 "description": ""
-            }
+            },
+            "description": ""
+        },
+        "GetLightCount": {
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetAllLights": {
+            "returns": {
+                "type": [
+                    "array<integer>"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "CreateLight": {
+            "params": [
+                {
+                    "name": "lightType",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "intesity",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "z",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "rx",
+                    "type": "integer",
+                    "description": "",
+                    "optional": true
+                },
+                {
+                    "name": "ry",
+                    "type": "integer",
+                    "description": "",
+                    "optional": true
+                },
+                {
+                    "name": "rz",
+                    "type": "integer",
+                    "description": "",
+                    "optional": true
+                }
+            ],
+            "returns": {
+                "type": [
+                    "integer",
+                    "false"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "DestroyLight": {
+            "params": [
+                {
+                    "name": "light",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        },
+        "IsValidLight": {
+            "params": [
+                {
+                    "name": "light",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetNetworkStats": {
+            "returns": {
+                "type": [
+                    "NetworkStats"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "CreateNPC": {
+            "params": [
+                {
+                    "name": "modelId",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "z",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "h",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "DestroyNPC": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        },
+        "IsValidNPC": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetAllNPC": {
+            "returns": {
+                "type": [
+                    "array<integer>"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetNPCCount": {
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "IsNPCStreamedIn": {
+            "params": [
+                {
+                    "name": "player",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetNPCModel": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetNPCLocation": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "z",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        },
+        "GetNPCLocation": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    [
+                        "integer",
+                        "integer",
+                        "integer"
+                    ]
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetNPCHealth": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "health",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        },
+        "GetNPCHealth": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetNPCAnimation": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": "The NPC identifier you get from CreateNPC"
+                },
+                {
+                    "name": "animation",
+                    "type": "string",
+                    "description": "The animation name as a string, see AnimationList."
+                },
+                {
+                    "name": "loop",
+                    "type": "boolean",
+                    "description": "true to loop the animation, false to play it a single time."
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetNPCHeading": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "heading",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        },
+        "GetNPCHeading": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetNPCTargetLocation": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "z",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "speed",
+                    "type": "integer",
+                    "description": "",
+                    "optional": true
+                }
+            ],
+            "description": ""
+        },
+        "SetNPCFollowPlayer": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "player",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "speed",
+                    "type": "integer",
+                    "description": "",
+                    "optional": true
+                }
+            ],
+            "description": ""
+        },
+        "SetNPCFollowVehicle": {
+            "params": [
+                {
+                    "name": "npc",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "vehicle",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "speed",
+                    "type": "integer",
+                    "description": "",
+                    "optional": true
+                }
+            ],
+            "description": ""
+        },
+        "CreateObject": {
+            "params": [
+                {
+                    "name": "modelId",
+                    "type": "integer",
+                    "description": "The model identifier for which object to spawn."
+                },
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": "X coordinate"
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": "Y coordinate"
+                },
+                {
+                    "name": "z",
+                    "type": "integer",
+                    "description": "Z coordinate"
+                },
+                {
+                    "name": "rx",
+                    "type": "integer",
+                    "description": "",
+                    "optional": "true"
+                },
+                {
+                    "name": "ry",
+                    "type": "integer",
+                    "description": "",
+                    "optional": "true"
+                },
+                {
+                    "name": "rz",
+                    "type": "integer",
+                    "description": "",
+                    "optional": "true"
+                },
+                {
+                    "name": "sx",
+                    "type": "integer",
+                    "description": "",
+                    "optional": "true"
+                },
+                {
+                    "name": "sy",
+                    "type": "integer",
+                    "description": "",
+                    "optional": "true"
+                },
+                {
+                    "name": "sz",
+                    "type": "integer",
+                    "description": "",
+                    "optional": "true"
+                }
+            ],
+            "returns": {
+                "type": [
+                    "integer",
+                    "false"
+                ],
+                "description": "returns an identifier to the new object. false on error."
+            },
+            "description": ""
+        },
+        "DestroyObject": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                }
+            ],
+            "description": ""
+        },
+        "IsValidObject": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetObjectCount": {
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetObjectModel": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                }
+            ],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "IsObjectStreamedIn": {
+            "params": [
+                {
+                    "name": "player",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetObjectStreamDistance": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                },
+                {
+                    "name": "distance",
+                    "type": "float",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        },
+        "SetObjectLocation": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": "X coordinate"
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": "Y coordinate"
+                },
+                {
+                    "name": "z",
+                    "type": "integer",
+                    "description": "Z coordinate"
+                }
+            ],
+            "description": ""
+        },
+        "GetObjectLocation": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                }
+            ],
+            "returns": {
+                "type": [
+                    [
+                        "integer",
+                        "integer",
+                        "integer"
+                    ]
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetObjectRotation": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "rx",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "ry",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "rz",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        },
+        "GetObjectRotation": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                }
+            ],
+            "returns": {
+                "type": [
+                    [
+                        "integer",
+                        "integer",
+                        "integer"
+                    ]
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetObjectScale": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "sx",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "sy",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "sz",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        },
+        "GetObjectScale": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                }
+            ],
+            "returns": {
+                "type": [
+                    [
+                        "integer",
+                        "integer",
+                        "integer"
+                    ]
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetObjectAttached": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                },
+                {
+                    "name": "attachType",
+                    "type": "integer",
+                    "description": "AttachType"
+                },
+                {
+                    "name": "attachId",
+                    "type": "integer",
+                    "description": "The identifier of the other entity you want to attach to."
+                },
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": "Relative X location."
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": "Relative Y location."
+                },
+                {
+                    "name": "z",
+                    "type": "integer",
+                    "description": "Relative Z location."
+                },
+                {
+                    "name": "rx",
+                    "type": "integer",
+                    "description": "Relative pitch rotation.",
+                    "optional": true
+                },
+                {
+                    "name": "ry",
+                    "type": "integer",
+                    "description": "Relative yaw rotation.",
+                    "optional": true
+                },
+                {
+                    "name": "rz",
+                    "type": "integer",
+                    "description": "Relative roll rotation.",
+                    "optional": true
+                },
+                {
+                    "name": "socketName",
+                    "type": "string",
+                    "description": "Socket where to attach to (PlayerBones). Can be empty.",
+                    "optional": true
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
         }
     }
 }
