@@ -1311,7 +1311,7 @@
                 {
                     "name": "object",
                     "type": "integer",
-                    "description": ""
+                    "description": "The object identifier from CreateObject."
                 },
                 {
                     "name": "sx",
@@ -1411,6 +1411,673 @@
             "returns": {
                 "type": [
                     "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetObjectDetached": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                }
+            ],
+            "description": ""
+        },
+        "IsObjectAttached": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetObjectAttachmentInfo": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                }
+            ],
+            "returns": {
+                "type": [
+                    [
+                        "integer",
+                        "integer"
+                    ]
+                ],
+                "description": "Returns two integers. First one being the attach type (ie ATTACH_VEHICLE) and the second one the identifier to what this object is attached to. See SetObjectAttached."
+            },
+            "description": ""
+        },
+        "IsObjectMoving": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetObjectMoveTo": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                },
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": "X location."
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": "Y location."
+                },
+                {
+                    "name": "z",
+                    "type": "integer",
+                    "description": "Z location."
+                },
+                {
+                    "name": "speed",
+                    "type": "integer",
+                    "description": "",
+                    "optional": true
+                }
+            ],
+            "description": ""
+        },
+        "StopObjectMove": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetObjectRotateAxis": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                },
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "z",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        },
+        "SetObjectColor": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                },
+                {
+                    "name": "colorHex",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "materialSlot",
+                    "type": "integer",
+                    "description": "",
+                    "optional": true
+                },
+                {
+                    "name": "emissive",
+                    "type": "boolean",
+                    "description": "",
+                    "optional": true
+                },
+                {
+                    "name": "emissiveStrength",
+                    "type": "integer",
+                    "description": "",
+                    "optional": true
+                }
+            ],
+            "description": ""
+        },
+        "SetObjectTexture": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                },
+                {
+                    "name": "textureFile",
+                    "type": "string",
+                    "description": ""
+                },
+                {
+                    "name": "materialSlot",
+                    "type": "integer",
+                    "description": "",
+                    "optional": true
+                }
+            ],
+            "description": ""
+        },
+        "SetObjectAnimatedTexture": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The object identifier from CreateObject."
+                },
+                {
+                    "name": "textureFile",
+                    "type": "string",
+                    "description": ""
+                },
+                {
+                    "name": "rows",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "columns",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "materialSlot",
+                    "type": "integer",
+                    "description": "",
+                    "optional": true
+                }
+            ],
+            "description": ""
+        },
+        "ImportPackage": {
+            "params": [
+                {
+                    "name": "packageName",
+                    "type": "string",
+                    "description": "Name of the package to import. Must be loaded before this one."
+                }
+            ],
+            "returns": {
+                "type": [
+                    "table"
+                ],
+                "description": "Creates a table holding the other packages exported functions. Return nil if PackageName does not exist."
+            },
+            "description": "Creates a table holding all exported functions by another package."
+        },
+        "AddFunctionExport": {
+            "params": [
+                {
+                    "name": "exportName",
+                    "type": "string",
+                    "description": "Name of the export. Commonly the name of the exported function."
+                },
+                {
+                    "name": "function",
+                    "type": "function",
+                    "description": "Function to export."
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": "Returns true on success. Return false if the export already exists."
+            },
+            "description": "Exports a function that can later be imported from another package."
+        },
+        "AddEvent": {
+            "params": [
+                {
+                    "name": "eventName",
+                    "type": "string",
+                    "description": "The name of the event. See ServerEvents or ClientEvents for a list of events."
+                },
+                {
+                    "name": "function",
+                    "type": "function",
+                    "description": "The function which will be called when the event occurs."
+                }
+            ],
+            "description": "Adds a function as event handler which will be called when a certain event occurs. Multiple functions can be bound to a single event."
+        },
+        "CallEvent": {
+            "params": [
+                {
+                    "name": "eventName",
+                    "type": "string",
+                    "description": "The name of the event. See ServerEvents or ClientEvents for a list of events."
+                },
+                {
+                    "name": "args",
+                    "type": "varargs",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        },
+        "AddRemoteEvent": {
+            "params": [
+                {
+                    "name": "eventName",
+                    "type": "string",
+                    "description": "The name of the event."
+                },
+                {
+                    "name": "function",
+                    "type": "function",
+                    "description": "The function which will be called when the event occurs."
+                }
+            ],
+            "description": ""
+        },
+        "AddCommand": {
+            "params": [
+                {
+                    "name": "commandName",
+                    "type": "string",
+                    "description": ""
+                },
+                {
+                    "name": "function",
+                    "type": "function",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        },
+        "GetAllPackages": {
+            "returns": {
+                "type": [
+                    "array<string>"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetPackageName": {
+            "returns": {
+                "type": [
+                    "string"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetPickupCount": {
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetAllPickups": {
+            "returns": {
+                "type": [
+                    "array<integer>"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "CreatePickup": {
+            "params": [
+                {
+                    "name": "modelId",
+                    "type": "integer",
+                    "description": "See Objects."
+                },
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": "Coordinate X where to create this pickup."
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": "Coordinate Y where to create this pickup."
+                },
+                {
+                    "name": "z",
+                    "type": "integer",
+                    "description": "Coordinate Z where to create this pickup."
+                }
+            ],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": "Returns the identifier to this newly created pickup."
+            },
+            "description": "Creates an object that spins around its axis. When a player or vehicle picks it up an event is called. OnPlayerPickupHit, OnVehiclePickupHit"
+        },
+        "DestroyPickup": {
+            "params": [
+                {
+                    "name": "pickup",
+                    "type": "integer",
+                    "description": "The pickup identifier from CreatePickup."
+                }
+            ],
+            "description": ""
+        },
+        "IsValidPickup": {
+            "params": [
+                {
+                    "name": "pickup",
+                    "type": "integer",
+                    "description": "The pickup identifier from CreatePickup."
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetPickupScale": {
+            "params": [
+                {
+                    "name": "pickup",
+                    "type": "integer",
+                    "description": "The pickup identifier from CreatePickup."
+                },
+                {
+                    "name": "sx",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "sy",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "sz",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "description": ""
+        },
+        "GetPickupScale": {
+            "params": [
+                {
+                    "name": "object",
+                    "type": "integer",
+                    "description": "The pickup identifier from CreatePickup."
+                }
+            ],
+            "returns": {
+                "type": [
+                    [
+                        "integer",
+                        "integer",
+                        "integer"
+                    ]
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "IsValidPlayer": {
+            "params": [
+                {
+                    "name": "player",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "CallRemoteEvent": {
+            "params": [
+                {
+                    "name": "player",
+                    "type": "integer",
+                    "description": "The player identifier."
+                },
+                {
+                    "name": "eventName",
+                    "type": "string",
+                    "description": ""
+                },
+                {
+                    "name": "args",
+                    "type": "varargs",
+                    "description": "Arguments to pass to the remote event."
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": "Returns true on success or false on an error."
+            }
+        },
+        "GetPlayerCount": {
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetAllPlayers": {
+            "returns": {
+                "type": [
+                    "array<integer>"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetNearestPlayer2D": {
+            "params": [
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetPlayersInRange2D": {
+            "params": [
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "range",
+                    "type": "integer"
+                }
+            ],
+            "returns": {
+                "type": [
+                    "array<integer>"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetPlayersInRange3D": {
+            "params": [
+                {
+                    "name": "x",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "y",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "z",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "range",
+                    "type": "integer"
+                }
+            ],
+            "returns": {
+                "type": [
+                    "array<integer>"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetStreamedPlayersForPlayer": {
+            "params": [
+                {
+                    "name": "player",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "array<integer>"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "SetPlayerName": {
+            "params": [
+                {
+                    "name": "player",
+                    "type": "integer",
+                    "description": ""
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "description": ""
+                }
+            ],
+            "description": "Sets a players name which will appear on the nametag. Overrides the Steam nickname."
+        },
+        "GetPlayerName": {
+            "params": [
+                {
+                    "name": "player",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "string"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetPlayerSteamId": {
+            "params": [
+                {
+                    "name": "player",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "string"
+                ],
+                "description": ""
+            },
+            "description": ""
+        },
+        "GetPlayerNetworkStats": {
+            "params": [
+                {
+                    "name": "player",
+                    "type": "integer",
+                    "description": ""
+                }
+            ],
+            "returns": {
+                "type": [
+                    "NetworkStats"
                 ],
                 "description": ""
             },
