@@ -1,0 +1,223 @@
+{
+    "functions": {
+        "DoesPakExist": {
+            "params": [
+                {
+                    "name": "PakName",
+                    "type": "string",
+                    "description": {
+                        "english": "The name of the Pak file (without extension).",
+                        "french": "Le nom du fichier en '.Pak' (sans l'extension)."
+                    }
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": {
+                    "english": "Returns true when the Pak exsits.",
+                    "french": "Retourne 'vrai' si le fichier Pak existe."
+                }
+            },
+            "description": {
+                "english": "Checks if a Pak with the specified name exists.",
+                "french": "Vérifie si un fichier en '.pak' avec le nom spécifié existe."
+            }
+        },
+        "LoadPak": {
+            "params": [
+                {
+                    "name": "PakName",
+                    "type": "string",
+                    "description": {
+                        "english": "The name of the Pak file (without extension).",
+                        "french": "Le nom du fichier Pak (sans l'extension)."
+                    }
+                },
+                {
+                    "name": "RootPath",
+                    "type": "string",
+                    "description": {
+                        "english": "Root name of your content path. (e.g: '/TestDLC/')",
+                        "french": "Le nom de votre racine pour accéder vers votre contenu. (exemple: '/TestDLC/')"
+                    }
+                },
+                {
+                    "name": "ContentPath",
+                    "type": "string",
+                    "description": {
+                        "english": "The full path to bind the root path to. (e.g: '../../../TestProject/Plugins/TestDLC/Content/')",
+                        "french": "Le chemin complet à attacher à votre RootPath. (exemple: '../../../TestProject/Plugins/TestDLC/Content/')"
+                    }
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": {
+                    "english": "Returns true on success. Start the client with the '-dev' parameter switch to enable logging. Useful for errors.",
+                    "french": "Retourne vrai en cas de succès. Démarrer le client avec le paramètre '-dev' pour activer les logs. (utile pour les erreurs)"
+                }
+            },
+            "description": {
+                "english": "Loads a '.pak' file.",
+                "french": "Charge le fichier '.pak'."
+            }
+        },
+        "ReplaceObjectModelMesh": {
+            "params": [
+                {
+                    "name": "ModelId",
+                    "type": "integer",
+                    "description": {
+                        "english": "The object model identifier to replace the mesh for, see Objects.",
+                        "french": "Le numéro d'Identification à attribuer au mesh, voir les Objets."
+                    }
+                },
+                {
+                    "name": "PathToMesh",
+                    "type": "string",
+                    "description": {
+                        "english": "Path to your mesh asset.",
+                        "french": "Chemin d'accès vers votre mesh."
+                    }
+                }
+            ],
+            "returns": {
+                "type": [
+                    "boolean"
+                ],
+                "description": {
+                    "english": "Returns true on success. Start the client with the '-dev' parameter switch to enable logging. Useful for errors.",
+                    "french": "Retourne vrai en cas de succès. Démarrer le client avec le paramètre '-dev' pour activer les logs. (utile pour les erreurs)"
+                }
+            }
+        },
+        "CreateCollisionBox": {
+            "params": [
+                {
+                    "name": "xPos",
+                    "type": "float",
+                    "description": {
+                        "english": "X position in the world.",
+                        "french": "Position X dans le monde."
+                    }
+                },
+                {
+                    "name": "yPos",
+                    "type": "float",
+                    "description": {
+                        "english": "Y position in the world.",
+                        "french": "Position Y dans le monde."
+                    }
+                },
+                {
+                    "name": "zPos",
+                    "type": "float",
+                    "description": {
+                        "english": "Z position in the world.",
+                        "french": "Position Z dans le monde."
+                    }
+                },
+                {
+                    "name": "xSize",
+                    "type": "float",
+                    "description": {
+                        "english": "Box size on the X axis.",
+                        "french": "Taille de la boîte sur l'axe X."
+                    }
+                },
+                {
+                    "name": "ySize",
+                    "type": "float",
+                    "description": {
+                        "english": "Box size on the Y axis.",
+                        "french": "Taille de la boîte sur l'axe Y."
+                    }
+                },
+                {
+                    "name": "zSize",
+                    "type": "float",
+                    "description": {
+                        "english": "Box size on the Z axis.",
+                        "french": "Taille de la boîte sur l'axe Z."
+                    }
+                },
+                {
+                    "name": "bVisible",
+                    "type": "boolean",
+                    "optional": true,
+                    "description": {
+                        "english": "Allows to see the collision box.",
+                        "french": "Permet de voir la boîte de collision."
+                    }
+                }
+            ],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": {
+                    "english": "Returns the identifier of the collision box.",
+                    "french": "Renvoie l'identifiant de la boîte de collision."
+                }
+            }
+        },
+        "CreateCollisionSphere": {
+            "params": [
+                {
+                    "name": "xPos",
+                    "type": "float",
+                    "description": {
+                        "english": "X position in the world.",
+                        "french": "Position X dans le monde."
+                    }
+                },
+                {
+                    "name": "yPos",
+                    "type": "float",
+                    "description": {
+                        "english": "Y position in the world.",
+                        "french": "Position Y dans le monde."
+                    }
+                },
+                {
+                    "name": "zPos",
+                    "type": "float",
+                    "description": {
+                        "english": "Z position in the world.",
+                        "french": "Position Z dans le monde."
+                    }
+                },
+                {
+                    "name": "radius",
+                    "type": "float",
+                    "description": {
+                        "english": "Defines the size of the sphere.",
+                        "french": "Définit la taille de la sphère."
+                    }
+                },
+                {
+                    "name": "bVisible",
+                    "type": "boolean",
+                    "optional": true,
+                    "description": {
+                        "english": "Allows to see the collision sphere.",
+                        "french": "Permet de voir la sphère de collision."
+                    }
+                }
+            ],
+            "returns": {
+                "type": [
+                    "integer"
+                ],
+                "description": {
+                    "english": "Returns the identifier of the collision sphere.",
+                    "french": "Renvoie l'identifiant de la sphère de collision."
+                }
+            }
+        }
+    }
+}
